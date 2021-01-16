@@ -1,0 +1,57 @@
+<!DOCTYPE html><html><head><meta charset="utf-8">
+</head><body bgcolor="#000000">
+    <script src="https://aframe.io/releases/1.1.0/aframe.min.js"></script>
+<a-scene id="scene">
+<a-box position="0 0 0" width="10" height="1" depth="10" color=#008b8b></a-box>
+<a-box position="1 5 -3"   rotation="0 45 0"width="2" height="5" color="#00fa9a" shadow></a-box>
+<a-cylinder position="1 0 -3"  radius="0.1" height="10" color="#FFC65D" shadow></a-cylinder>
+
+<script type="module">
+    for (let j = 0; j < 10; j++) {
+      for (let i = 0; i < 10; i++) {
+        const box = document.createElement("a-box");
+        box.setAttribute("position", { x: i * 1 - 5 , y: 5, z:  Math.random() * 10 - 5, });
+        box.setAttribute("width", 2);
+        box.setAttribute("height", 5);
+        box.setAttribute("depth", 1);
+        box.setAttribute("color","#00fa9a");
+        scene.appendChild(box);
+      }
+    }
+</script>
+
+<script type="module">
+    for (let j = 0; j < 10; j++) {
+      for (let i = 0; i < 10; i++) {
+        const box = document.createElement("a-cylinder");
+        cylinder.setAttribute("position", { x: i * 1 - 5 , y: 5, z:  Math.random() * 10 - 5, });
+        cylinder.setAttribute("radius", 0.1);
+        cylinder.setAttribute("height", 10);
+        cylinder.setAttribute("color", "#FFC65D");
+        scene.appendChild(cylinder);
+      }
+    }
+</script>
+
+
+
+<a-entity rotation="0 0 0" animation="property: rotation; to: 0 360 0; loop: true; dur: 10000">
+<a-sphere position="7 2 0" radius="0.1" color="yellow"></a-sphere>
+
+<a-entity rotation="0 0 0" animation="property: rotation; to: 0 360 0; loop: true; dur: 10000">
+<a-sphere position="8 1 0" radius="0.5" color="yellow"></a-sphere>
+
+<a-entity rotation="0 0 0" animation="property: rotation; to: 0 360 0; loop: true; dur: 10000">
+<a-sphere position="6 1.5 0" radius="0.2" color="yellow"></a-sphere>
+
+<a-entity rotation="0 0 0" animation="property: rotation; to: 0 360 0; loop: true; dur: 10000">
+<a-sphere position="9 3 0" radius="0.6" color="yellow"></a-sphere>
+
+<a-entity rotation="0 0 0" animation="property: rotation; to: 0 360 0; loop: true; dur: 10000">
+<a-sphere position="10 5 0" radius="1" color="yellow"></a-sphere>
+      
+</a-entity>
+
+</a-scene>
+</body>
+</html>
